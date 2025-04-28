@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="fondo">
+        <header>
+            <h1>WhatsApp Api (^^)</h1>
+        </header>
+        <div class="general">
+            <div>
+                <label for="numTel">Numero Telefonico:</label><br>
+                    <input class="entradaTcl" type="number" required maxlength="12" placeholder="Numero Telefonico" id="numTel">
+            </div>
+            <div style="margin-top: 20px;">
+                <label for="sms">Mensaje:</label><br>
+                    <textarea class="entradaTcl" name="Mensaje" id="mensaje" rows="5" required placeholder="Escribe tu mensaje :D"></textarea>
+            </div>
+            <div>
+                <button class="btnQR" onclick="generar()">Generar QR</button>
+            </div>
+            <div id="qr_code" style="text-align: center;">
+                <!-- Aquí va el QR :v -->
+            </div>
+        </div>
+    </div>
+</body>
+<script src="app.js"></script>
+</html>

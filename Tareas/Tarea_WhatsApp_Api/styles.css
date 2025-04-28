@@ -1,0 +1,40 @@
+header {
+    width: 300px;
+    margin: 50px auto;
+    color: rgb(37, 211, 102);
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+.general{
+    width: 450px;
+    margin: 50px auto;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+.btnQR{
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(37, 211, 102);
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    border: none;
+    cursor: pointer;
+}
+textarea{
+    height: 150px;
+    width: 400px;
+}
+body{
+    background-color: rgb(252, 245, 235);
+}
+.entradaTcl{
+    border-radius: 15px;
+    border-color: black;
+}
+.fondo{
+    background-color: white;
+    border-radius: 10px;
+    width: 425px;
+    margin: 50px auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
