@@ -1,0 +1,17 @@
+{
+  "name": "clase-11",
+  "version": "1.0.0",
+  "description": "Una aplicacion base con node y http",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Node.js",
+    "Server",
+    "http",
+    "local"
+  ],
+  "author": "AldairH",
+  "license": "ISC"
+}

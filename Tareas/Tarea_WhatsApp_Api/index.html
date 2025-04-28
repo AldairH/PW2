@@ -21,7 +21,8 @@
                     <textarea class="entradaTcl" name="Mensaje" id="mensaje" rows="5" required placeholder="Escribe tu mensaje :D"></textarea>
             </div>
             <div>
-                <button class="btnQR" onclick="generar()">Generar QR</button>
+                <button id="btnEnviar" class="btn" onclick="enviar()">Enviar</button>
+                <button class="btn" onclick="generar()">Generar QR</button>
             </div>
             <div id="qr_code" style="text-align: center;">
                 <!-- Aquí va el QR :v -->
