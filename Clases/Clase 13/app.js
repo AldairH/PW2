@@ -7,7 +7,7 @@ const port = 5030;
 app.get("/", (req, res)=>{
     //res.setEncoding("Hola mundo!");
     //res.sendFile("C:/Users/aldai/Desktop/PW2/Clases/Clase 13/index.html");
-    res.sendFile( path.join(__dirname+"/index.html"));
+    res.sendFile(path.join(__dirname+"/index.html"));
 })
 
 app.listen(port, ()=>{
