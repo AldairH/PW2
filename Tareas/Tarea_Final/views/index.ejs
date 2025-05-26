@@ -22,7 +22,7 @@
             <td><%= users.correo %></td>
             <td class="action-links">
                 <a href="/edit/<%= users.id %>">Editar</a>
-                <a href="/delete/<%= users.id %>">Eliminar</a>
+                <a href="/delete/<%= users.id %>" onclick="return confirm('¿Estás seguro de eliminar este usuario?');">Eliminar</a>
             </td>
         </tr>
         <% }); %>
