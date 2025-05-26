@@ -1,6 +1,7 @@
 const express = require('express');
 const mysql = require('mysql2');
 const bodyParser = require('body-parser');
+const e = require('express');
 
 const app = express();
 //Manejar peticiones por medio de URL usando Post y Request por medio de la url.
@@ -14,7 +15,7 @@ app.set('view engine','ejs');
 const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: 'Olakase4',
+    password: 'Olakase4',   
     database: 'gestordetareas',
     port: 3306
 })
@@ -73,4 +74,35 @@ app.get('/edit/:id',(req,res)=>{
             res.render('edit',{user: results[0]});
         }
     });    
+});
+
+//Update.
+app.post('/update/:id', (req,res)=>{
+    const {id} = req.params;
+    const {name, email} = req.body;
+    const actualizarUser = 'UPDATE users SET usuario=?, correo=? WHERE id=?';
+    db.query(actualizarUser,[name,email,id],(err)=>{
+        if(err){
+            console.err("Sin actualizar usuario: ", err);
+            res.send("Error de Update")
+        }else{
+            res.redirect('/');
+        }
+    });
+
+});
+
+//Eliminar usuario.
+
+app.get('/delete/:id',(req,res)=>{
+    const {id} = req.params;
+    const eliminar='DELETE FROM users WHERE id=?';
+    db.query(eliminar,[id],(err)=>{
+        if(err){
+            console.err("Error al eliminar:", err);
+            res.send("Error al eliminar.");
+        }else{
+            res.redirect('/');
+        }
+    });
 });

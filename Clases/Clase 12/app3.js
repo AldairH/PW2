@@ -2,14 +2,14 @@
 const express = require('express');
 
 //Generar una instanacia.
-const app = express();
+const app3 = express();
 
 //Generar puerto.
-const port= 5025;
+const port3= 5050;
 
 //Ruta de la petición (Configuración del Res).
-app.get('/', (req,res)=>{
-    res.send('Hola mundo desde el server main 0_o');
+app3.get('/', (req,res)=>{
+    res.send('Hola mundo desde el tercer servidor >:D');
 });
 
-app.listen(port);
+app3.listen(port3);
